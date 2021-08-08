@@ -3,7 +3,12 @@ package com.learnprogramming;
 public class MergeSort {
 
     public static void main(String[] args) {
-
+        int [] array={20, 35, -15, 7, 55, 1, -22};
+        mergeSort(array,0,7);
+        for (int i:array
+        ) {
+            System.out.println(i);
+        }
     }
     // { 20, 35, -15, 7, 55, 1, -22 }
     public static void mergeSort(int[] input, int start, int end) {
@@ -30,7 +35,7 @@ public class MergeSort {
         //The method always is merging the sorted left and right part.
         //if the [mid-1] refers to last element of the right part is smaller than
         //[mid]refers to first element of the right part then the two array can combine without needing any coding process.
-        if (input[mid - 1] <= input[mid]) {
+        if (input[mid - 1] >= input[mid]) {
             return;
         }
 
@@ -43,7 +48,8 @@ public class MergeSort {
         //comparing left to right array.
         //smaller one is put to the temp array.
         while (i < mid && j < end) {
-            temp[tempIndex++] = input[i] <= input[j] ? input[i++] : input[j++];
+            temp[tempIndex++] = input[i] >= input[j] ? input[i++] : input[j++];
+            //temp[tempIndex++] = input[j] <= input[i] ? input[j++] : input[i++];
         }
 
         //If there is a element that is leftover.There is no need to put it to temp array.
