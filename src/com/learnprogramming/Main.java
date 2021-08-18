@@ -33,10 +33,10 @@ public class Main {
 
         //ht.print();
 
-//        System.out.println("Retrieve key Smith: " + ht.get("Smith"));
-//
-//        ht.remove("Doe");
-//        ht.remove("Jones");
+        System.out.println("Retrieve key Smith: " + ht.get("Smith"));
+
+        ht.remove("Doe");
+        ht.remove("Jones");
         ht.print();
 //
 
